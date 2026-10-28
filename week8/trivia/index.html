@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>trivia!</title>
+</head>
+
+<body style="margin:0">
+
+<header style="background-color:cornflowerblue; padding:50px;text-align:center;font-size:large">
+    <h1 style="color:white; font-family:sans-serif">Trivia!</h1>
+</header>
+
+<main style="padding-left:100px">
+
+<h2 style="margin:20px 0 10px 0;padding:20px">Part 1: Multiple Choice</h2>
+
+<hr>
+
+<h3 style="margin-top:0 ;padding:10px">
+    What is the approximate ratio of people to sheep in New Zealand?
+</h3>
+
+<button style="border: none; background-color: #e2e8f0; border-radius: 4px; padding: 8px 12px;" class="choice">
+    6 people per 1 sheep
+</button>
+
+<button style="border: none; background-color: #e2e8f0; border-radius: 4px; padding: 8px 12px;" class="choice">
+    3 people per 1 sheep
+</button>
+
+<button style="border: none; background-color: #e2e8f0; border-radius: 4px; padding: 8px 12px;" class="choice">
+    1 person per 1 sheep
+</button>
+
+<button style="border: none; background-color: #e2e8f0; border-radius: 4px; padding: 8px 12px;" class="choice">
+    1 person per 3 sheep
+</button>
+
+<button style="border: none; background-color: #e2e8f0; border-radius: 4px; padding: 8px 12px;" class="choice">
+    1 person per 6 sheep
+</button>
+
+
+<h2 style="margin:10px;padding:20px">Part 2: Free Response</h2>
+
+<hr>
+
+<h3>
+    In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?
+</h3>
+
+<input>
+
+<button>Check Answer</button>
+
+<p></p>
+
+</main>
+
+
+<script>
+
+    let buttons = document.querySelectorAll(".choice");
+
+    for (let i = 0; i < buttons.length; i++)
+    {
+        buttons[i].addEventListener("click", function()
+        {
+            if (buttons[i].innerHTML.trim() == "1 person per 6 sheep")
+            {
+                buttons[i].style.backgroundColor = "green";
+                buttons[i].style.color = "white";
+            }
+            else
+            {
+                buttons[i].style.backgroundColor = "red";
+                buttons[i].style.color = "white";
+            }
+        });
+    }
+
+
+    let input = document.querySelector("input");
+
+    let check = document.querySelector("input + button");
+
+    let result = document.querySelector("p");
+
+
+    check.addEventListener("click", function()
+    {
+        if (input.value.toLowerCase().trim() == "switzerland")
+        {
+            input.style.backgroundColor = "green";
+            result.innerHTML = "Correct!";
+        }
+        else
+        {
+            input.style.backgroundColor = "red";
+            result.innerHTML = "Incorrect";
+        }
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>My Little World</title>
+    <link rel="stylesheet" href="styles.css">
+</head><body><header>
+    <h1>My Little World</h1>
+    <p>Words, thoughts, people, and the things I want to create.</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="people.html">People</a>
+    <a href="someday.html">Someday</a>
+    <a href="writing.html">Writing</a>
+</nav>
+
+<main>
+    <h2>Welcome</h2>
+
+    <p>
+        I have always liked words and ideas.
+        I enjoy thinking about people, their personalities,
+        and the stories behind them.
+    </p>
+
+    <p>
+        I do not know exactly what I will write one day,
+        but I know that I want to write.
+    </p>
+
+    <section>
+        <h2>A small reminder</h2>
+        <p>Maybe I am waiting too much for the perfect time.</p>
+
+        <button id="messageButton">Change the message</button>
+        <p id="message"></p>
+    </section>
+</main>
+
+<script>
+    let button = document.querySelector("#messageButton");
+    let message = document.querySelector("#message");
+
+    button.addEventListener("click", function()
+    {
+        message.innerHTML = "Maybe I should just start writing.";
+    });
+</script>
+
+</body></html>
